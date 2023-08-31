@@ -1,23 +1,79 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Next.js",
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": "."
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@schema/*": [
+        "src/schema/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+    },
+    "preserveConstEnums": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5",
+    "removeComments": true,
+    "importHelpers": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next",
+    ".husky"
+  ]
 }
